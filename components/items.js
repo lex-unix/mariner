@@ -36,7 +36,7 @@ export const Gallery = ({ media }) => {
     <Box align="center">
       {media.map((m, i) => (
         <Box key={i} mb={4}>
-          <GalleryImage loading="lazy" borderRadius="md" src={m} />
+          <GalleryImage borderRadius="md" src={m} />
         </Box>
       ))}
     </Box>
