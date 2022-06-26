@@ -57,7 +57,7 @@ export const ServiceItem = ({ title, tag, price, capacity, src, href }) => {
         </Flex>
         <Flex align="center">
           <Icon as={BiPhotoAlbum} mr={2} />
-          <NextLink href={href} passHref>
+          <NextLink href={href} passHref scroll={false}>
             <Link>View gallery</Link>
           </NextLink>
         </Flex>
