@@ -8,9 +8,6 @@ const Tours = () => {
     <Layout title="Tour">
       <Box>
         <Bread title="Itinerary" isMarina />
-        <Heading mb={4} textAlign="center">
-          Experience Croatia
-        </Heading>
 
         <Heading variant="trip-day">Day 1</Heading>
         <Section>

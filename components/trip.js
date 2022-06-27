@@ -9,11 +9,7 @@ export const Paragraph = ({ children }) => {
 }
 
 export const Section = ({ children }) => {
-  return (
-    <Box display={{ base: 'inline-block', md: 'flex' }} mb={12}>
-      {children}
-    </Box>
-  )
+  return <Box display={{ base: 'inline-block', md: 'flex' }}>{children}</Box>
 }
 
 export const SectionImage = ({ id, alt }) => {
