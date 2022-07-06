@@ -8,7 +8,7 @@ const Page = () => {
     <Layout>
       <Container maxW="container.md" align="center" pt={8}>
         <Heading>Mariner</Heading>
-        <Text fontFamily="Cinzel">Banjole / Istra / Croatia</Text>
+        <Text fontFamily="Cinzel">Banjole / Istria / Croatia</Text>
         <Box py={5}>
           <Carousel media={media} alt="Home page images" />
         </Box>
