@@ -4,6 +4,10 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import styled from '@emotion/styled'
 import { PrevButton, NextButton, DotButton } from './carousel-buttons'
+import home1 from '../public/images/home-1.jpg'
+import home2 from '../public/images/home-2.jpg'
+import home3 from '../public/images/home-3.jpg'
+import home4 from '../public/images/home-4.jpg'
 
 const Viewport = styled.div`
   position: relative;
@@ -27,7 +31,7 @@ const Dots = styled.div`
   padding-top: 10px;
 `
 
-const Carousel = ({ media, alt }) => {
+const Carousel = () => {
   const [emblaRef, embla] = useEmblaCarousel({ loop: false }, [
     Autoplay({ delay: 4000, stopOnInteraction: false })
   ])
@@ -58,11 +62,18 @@ const Carousel = ({ media, alt }) => {
     <>
       <Viewport ref={emblaRef}>
         <Container>
-          {media.map((m, i) => (
-            <Slide key={i}>
-              <Image src={m} alt={alt} />
-            </Slide>
-          ))}
+          <Slide>
+            <Image src={home1} alt="Catamaran on water, Croatia" />
+          </Slide>
+          <Slide>
+            <Image src={home2} alt="View of Banjole, Croatia" />
+          </Slide>
+          <Slide>
+            <Image src={home3} alt="Catamaran Istra, Croatia" />
+          </Slide>
+          <Slide>
+            <Image src={home4} alt="Istra, Croatia" />
+          </Slide>
         </Container>
         <PrevButton enabled={prevBtnEnabled} onClick={scrollPrev} />
         <NextButton enabled={nextBtnEnabled} onClick={scrollNext} />

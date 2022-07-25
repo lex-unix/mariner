@@ -1,6 +1,5 @@
 import { Container, Heading, Text, Box } from '@chakra-ui/react'
 import Carousel from '../components/carousel'
-import { media } from '../lib/home-media'
 import Layout from '../components/layouts/article'
 
 const Page = () => {
@@ -10,7 +9,7 @@ const Page = () => {
         <Heading>Mariner</Heading>
         <Text fontFamily="Cinzel">Banjole / Istria / Croatia</Text>
         <Box py={5}>
-          <Carousel media={media} alt="Home page images" />
+          <Carousel />
         </Box>
         <Text>
           Explore, experience and enjoy Croatia with Mariner. We provide
