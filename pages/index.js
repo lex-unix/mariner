@@ -1,6 +1,10 @@
+import dynamic from 'next/dynamic'
 import { Container, Heading, Text, Box } from '@chakra-ui/react'
-import Carousel from '../components/carousel'
 import Layout from '../components/layouts/article'
+
+const Carousel = dynamic(() => import('../components/carousel'), {
+  ssr: false
+})
 
 const Page = () => {
   return (
