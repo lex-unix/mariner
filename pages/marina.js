@@ -13,7 +13,7 @@ const Marine = () => {
         </Heading>
         <Service>
           <ServiceItem
-            title="Defour 430 Grand Large"
+            title="Dufour 430 Grand Large"
             tag="Yacht"
             capacity="4-5 people"
             price="Contact for price information"
