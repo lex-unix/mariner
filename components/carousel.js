@@ -1,17 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import styled from '@emotion/styled'
 import { PrevButton, NextButton, DotButton } from './carousel-buttons'
-import { Box } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import CarouselItem from './carousel-item'
-
-const Dots = styled.div`
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding-top: 10px;
-`
 
 const Carousel = () => {
   const [emblaRef, embla] = useEmblaCarousel({ loop: false }, [
@@ -72,7 +64,7 @@ const Carousel = () => {
         <PrevButton enabled={prevBtnEnabled} onClick={scrollPrev} />
         <NextButton enabled={nextBtnEnabled} onClick={scrollNext} />
       </Box>
-      <Dots>
+      <Flex justify="center" mt="4">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
@@ -80,7 +72,7 @@ const Carousel = () => {
             onClick={() => scrollTo(index)}
           />
         ))}
-      </Dots>
+      </Flex>
     </>
   )
 }
