@@ -22,6 +22,7 @@ const ContactUs = () => {
             p={5}
             borderRadius="xl"
             boxShadow={useColorModeValue('lg', 'dark-lg')}
+            maxW="lg"
           >
             <ContactForm />
           </Box>
