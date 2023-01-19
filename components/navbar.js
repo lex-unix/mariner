@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
@@ -22,13 +23,23 @@ const LinkItem = ({ href, path, children }) => {
   const activeColor = useColorModeValue('marineLight', 'marineDark')
 
   return (
-    <NextLink href={href} scroll={false} passHref>
-      <Link p={2} bg={active ? activeColor : undefined}>
-        {children}
-      </Link>
-    </NextLink>
+    <Link
+      as={NextLink}
+      href={href}
+      scroll={false}
+      p={2}
+      bg={active ? activeColor : undefined}
+    >
+      {children}
+    </Link>
   )
 }
+
+const MenuLink = forwardRef((props, ref) => (
+  <Link ref={ref} as={NextLink} {...props} />
+))
+
+MenuLink.displayName = 'MenuLink'
 
 const Navbar = props => {
   const { path } = props
@@ -88,29 +99,18 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink scroll={false} href="/" passHref>
-                  <MenuItem scroll={false} as={Link}>
-                    Home
-                  </MenuItem>
-                </NextLink>
-                <NextLink scroll={false} href="/marina" passHref>
-                  <MenuItem scroll={false} as={Link}>
-                    Marina
-                  </MenuItem>
-                </NextLink>
-                <NextLink scroll={false} href="/apartments" passHref>
-                  <MenuItem scroll={false} as={Link}>
-                    Apartments
-                  </MenuItem>
-                </NextLink>
-                <NextLink scroll={false} href="/tour" passHref>
-                  <MenuItem scroll={false} as={Link}>
-                    Tour
-                  </MenuItem>
-                </NextLink>
-                <NextLink scroll={false} href="/contactus" passHref>
-                  <MenuItem as={Link}>Contact Us</MenuItem>
-                </NextLink>
+                <MenuItem as={MenuLink} href="/">
+                  Home
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/marina">
+                  Marina
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/tour">
+                  Tour
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/contactus">
+                  Contact us
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

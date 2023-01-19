@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { AspectRatio } from '@chakra-ui/react'
 
 const CarouselItem = ({ src, alt }) => {

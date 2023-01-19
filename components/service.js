@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import {
   Box,
   LinkBox,
-  LinkOverlay,
   Badge,
   SimpleGrid,
   Text,
@@ -33,10 +32,8 @@ export const ServiceItem = ({ title, tag, price, capacity, src, href }) => {
         borderWidth={1}
         borderRadius="lg"
       >
-        <NextLink href={href} scroll={false} passHref>
-          <LinkOverlay>
-            <ServiceImage borderRadius="sm" src={src} alt={title} />
-          </LinkOverlay>
+        <NextLink href={href} scroll={false}>
+          <ServiceImage borderRadius="sm" src={src} alt={title} />
         </NextLink>
         <Box my={3}>
           <Heading fontSize={19}>
@@ -57,9 +54,9 @@ export const ServiceItem = ({ title, tag, price, capacity, src, href }) => {
         </Flex>
         <Flex align="center">
           <Icon as={BiPhotoAlbum} mr={2} />
-          <NextLink href={href} passHref scroll={false}>
-            <Link>View gallery</Link>
-          </NextLink>
+          <Link as={NextLink} href={href} scroll={false}>
+            View gallery
+          </Link>
         </Flex>
       </LinkBox>
     </motion.div>

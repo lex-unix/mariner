@@ -7,7 +7,7 @@ const NotFound = () => {
       <Heading>Not Found</Heading>
       <Text>The page you are looking for was not found</Text>
       <Divider my={6} />
-      <Link href="/" passHref>
+      <Link href="/">
         <Button colorScheme="blue">Return home</Button>
       </Link>
     </Container>
