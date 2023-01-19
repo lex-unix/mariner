@@ -1,28 +1,10 @@
-import Image from 'next/image'
 import { useState, useCallback, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import styled from '@emotion/styled'
 import { PrevButton, NextButton, DotButton } from './carousel-buttons'
-import home1 from '../public/images/home-1.jpg'
-import home2 from '../public/images/home-2.jpg'
-import home3 from '../public/images/home-3.jpg'
-import home4 from '../public/images/home-4.jpg'
-
-const Viewport = styled.div`
-  position: relative;
-  max-width: min(900px, 100%)
-  heigh: auto;
-  overflow: hidden;
-`
-
-const Container = styled.div`
-  display: flex;
-`
-
-const Slide = styled.div`
-  flex: 0 0 100%;
-`
+import { Box } from '@chakra-ui/react'
+import CarouselItem from './carousel-item'
 
 const Dots = styled.div`
   display: flex;
@@ -60,24 +42,36 @@ const Carousel = () => {
 
   return (
     <>
-      <Viewport ref={emblaRef}>
-        <Container>
-          <Slide>
-            <Image src={home1} alt="Catamaran on water, Croatia" />
-          </Slide>
-          <Slide>
-            <Image src={home2} alt="View of Banjole, Croatia" />
-          </Slide>
-          <Slide>
-            <Image src={home3} alt="Catamaran Istra, Croatia" />
-          </Slide>
-          <Slide>
-            <Image src={home4} alt="Istra, Croatia" />
-          </Slide>
-        </Container>
+      <Box
+        ref={emblaRef}
+        pos="relative"
+        width="100%"
+        maxW={900}
+        height="auto"
+        overflow="hidden"
+        borderRadius="md"
+      >
+        <Box display="flex">
+          <CarouselItem
+            src="/images/home-1.jpg"
+            alt="Catamaran on water, Croatia"
+          />
+          <CarouselItem
+            src="/images/home-2.jpg"
+            alt="View of Banjole, Croatia"
+          />
+          <CarouselItem
+            src="/images/home-3.jpg"
+            alt="View of Banjole, Croatia"
+          />
+          <CarouselItem
+            src="/images/home-4.jpg"
+            alt="View of Banjole, Croatia"
+          />
+        </Box>
         <PrevButton enabled={prevBtnEnabled} onClick={scrollPrev} />
         <NextButton enabled={nextBtnEnabled} onClick={scrollNext} />
-      </Viewport>
+      </Box>
       <Dots>
         {scrollSnaps.map((_, index) => (
           <DotButton

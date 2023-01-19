@@ -7,8 +7,6 @@ const SideButton = styled.div`
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
-  justify-content: center;
-  align-items: center;
 `
 
 const Dot = styled.button`
@@ -27,11 +25,14 @@ export const PrevButton = ({ enabled, onClick }) => (
   <Box as={SideButton} left={1}>
     <IconButton
       aria-label="Previous buttom"
-      color="white"
+      color="whiteAlpha.700"
       variant="unstyled"
       icon={<ChevronLeftIcon h={10} w={10} />}
       onClick={onClick}
       isDisabled={!enabled}
+      _hover={{
+        color: 'white'
+      }}
     />
   </Box>
 )
@@ -40,11 +41,14 @@ export const NextButton = ({ enabled, onClick }) => (
   <Box as={SideButton} right={1}>
     <IconButton
       aria-label="Previous buttom"
-      color="white"
+      color="whiteAlpha.700"
       variant="unstyled"
       icon={<ChevronRightIcon h={10} w={10} />}
       onClick={onClick}
       isDisabled={!enabled}
+      _hover={{
+        color: 'white'
+      }}
     />
   </Box>
 )
