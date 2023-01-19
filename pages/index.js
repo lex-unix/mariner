@@ -13,9 +13,9 @@ const Page = () => {
         </Box>
         <Text>
           Explore, experience and enjoy Croatia with Mariner. We provide
-          exclusive services for everyone. <br /> Discover yachts, catamarans,
-          apartments and more.
+          exclusive services for everyone.
         </Text>
+        <Text mt="2">Discover yachts, catamarans, apartments and more.</Text>
       </Box>
     </Layout>
   )
