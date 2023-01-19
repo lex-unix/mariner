@@ -25,7 +25,7 @@ const ServiceImage = chakra(Image, {
 
 export const ServiceItem = ({ title, tag, price, capacity, src, href }) => {
   return (
-    <motion.div whileHover={{ scale: 1.1 }}>
+    <motion.div whileHover={{ scale: 1.02 }}>
       <LinkBox
         p={3}
         my="auto"
