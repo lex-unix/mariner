@@ -42,6 +42,7 @@ const Carousel = () => {
         height="auto"
         overflow="hidden"
         borderRadius="md"
+        willChange="transform"
       >
         <Box display="flex">
           <CarouselItem
