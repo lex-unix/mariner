@@ -18,10 +18,10 @@ const ContactUs = () => {
         <Box align="center">
           <Box
             mt={8}
-            borderWidth={2}
+            borderWidth="thin"
             p={5}
             borderRadius="xl"
-            boxShadow={useColorModeValue('lg', 'dark-lg')}
+            boxShadow={useColorModeValue('xl', 'dark-lg')}
             maxW="lg"
           >
             <ContactForm />
