@@ -62,8 +62,12 @@ const Carousel = () => {
             alt="View of Banjole, Croatia"
           />
         </Box>
-        <PrevButton enabled={prevBtnEnabled} onClick={scrollPrev} />
-        <NextButton enabled={nextBtnEnabled} onClick={scrollNext} />
+        {selectedIndex > 0 && (
+          <PrevButton enabled={prevBtnEnabled} onClick={scrollPrev} />
+        )}
+        {selectedIndex < scrollSnaps.length - 1 && (
+          <NextButton enabled={nextBtnEnabled} onClick={scrollNext} />
+        )}
       </Box>
       <Flex justify="center" mt="4">
         {scrollSnaps.map((_, index) => (

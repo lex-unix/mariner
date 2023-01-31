@@ -10,23 +10,23 @@ const variants = {
 const Layout = ({ title, children }) => {
   const t = `${title} - Mariner`
   return (
-    <motion.div
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      transition={{ duration: 0.275 }}
-      style={{ position: 'relative' }}
-    >
-      <>
-        {title && (
-          <Head>
-            <title>{t}</title>
-          </Head>
-        )}
+    <>
+      {title && (
+        <Head>
+          <title>{t}</title>
+        </Head>
+      )}
+      <motion.div
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ duration: 0.275 }}
+        style={{ position: 'relative' }}
+      >
         {children}
-      </>
-    </motion.div>
+      </motion.div>
+    </>
   )
 }
 
