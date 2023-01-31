@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, IconButton } from '@chakra-ui/react'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 
 export const PrevButton = ({ enabled, onClick }) => (
@@ -48,17 +48,21 @@ export const NextButton = ({ enabled, onClick }) => (
 )
 
 export const DotButton = ({ selected, onClick }) => {
-  const inActiveColor = useColorModeValue('blackAlpha', 'whiteAlpha')
   return (
     <Button
-      w="20px"
+      w="32px"
       height="4px"
       pos="relative"
       padding={0}
       marginX="4px"
       variant="solid"
-      colorScheme={selected ? 'blue' : inActiveColor}
+      background={selected ? 'whiteAlpha.800' : 'whiteAlpha.500'}
       onClick={onClick}
+      _hover={{
+        background: selected
+          ? 'rgba(255, 255, 255, 0.80)'
+          : 'rgba(255, 255, 255, 0.80)'
+      }}
     />
   )
 }

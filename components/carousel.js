@@ -68,16 +68,24 @@ const Carousel = () => {
         {selectedIndex < scrollSnaps.length - 1 && (
           <NextButton enabled={nextBtnEnabled} onClick={scrollNext} />
         )}
+        <Flex
+          pos="absolute"
+          pointerEvents="auto"
+          bottom="0"
+          height="40px"
+          insetX="0"
+          justify="center"
+          alignItems="center"
+        >
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              selected={selectedIndex === index}
+              onClick={() => scrollTo(index)}
+            />
+          ))}
+        </Flex>
       </Box>
-      <Flex justify="center" mt="4">
-        {scrollSnaps.map((_, index) => (
-          <DotButton
-            key={index}
-            selected={selectedIndex === index}
-            onClick={() => scrollTo(index)}
-          />
-        ))}
-      </Flex>
     </>
   )
 }
