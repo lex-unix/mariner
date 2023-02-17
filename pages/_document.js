@@ -6,7 +6,6 @@ export default function Document() {
   return (
     <Html lang="us">
       <Head>
-        <meta name="theme-color" content="hsl(240, 100%, 82%)" />
         <link
           rel="preload"
           href="/fonts/inter-var-latin.woff2"
