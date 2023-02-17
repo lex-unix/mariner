@@ -14,6 +14,8 @@ const Layout = ({ title, children }) => {
       {title && (
         <Head>
           <title>{t}</title>
+          <meta property="og:title" content={t} />
+          <meta name="twitter:title" content={t} />
         </Head>
       )}
       <motion.div
