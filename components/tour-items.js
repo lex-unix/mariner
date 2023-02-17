@@ -21,7 +21,7 @@ const TourImage = chakra(Image, {
 
 export const TourItem = ({ title, tag, age, src }) => {
   return (
-    <motion.div whileHover={{ scale: 1.1 }}>
+    <motion.div whileHover={{ scale: 1.02 }}>
       <Box
         p={3}
         my="auto"

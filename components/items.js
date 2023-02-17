@@ -19,7 +19,7 @@ export const Bread = ({ title, isMarina }) => {
   return (
     <Breadcrumb my={4} separator={<ChevronRightIcon />}>
       <BreadcrumbItem>
-        <Link href={href} passHref>
+        <Link href={href}>
           <BreadcrumbLink>{category}</BreadcrumbLink>
         </Link>
       </BreadcrumbItem>

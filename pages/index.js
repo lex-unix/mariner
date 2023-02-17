@@ -1,11 +1,11 @@
-import { Container, Heading, Text, Box } from '@chakra-ui/react'
+import { Heading, Text, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Carousel from '../components/carousel'
 
 const Page = () => {
   return (
     <Layout>
-      <Container maxW="container.md" align="center" pt={8}>
+      <Box pt={8} align="center">
         <Heading>Mariner</Heading>
         <Text fontFamily="Cinzel">Banjole / Istria / Croatia</Text>
         <Box py={5}>
@@ -13,10 +13,10 @@ const Page = () => {
         </Box>
         <Text>
           Explore, experience and enjoy Croatia with Mariner. We provide
-          exclusive services for everyone. <br /> Discover yachts, catamarans,
-          apartments and more.
+          exclusive services for everyone.
         </Text>
-      </Container>
+        <Text mt="2">Discover yachts, catamarans, apartments and more.</Text>
+      </Box>
     </Layout>
   )
 }

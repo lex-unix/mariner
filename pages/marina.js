@@ -38,7 +38,7 @@ const Marine = () => {
           />
         </Service>
         <Box align="center" mt={8}>
-          <Link href="marina/itinerary" passHref scroll={false}>
+          <Link href="marina/itinerary" scroll={false}>
             <Button colorScheme="blue">View Itinerary</Button>
           </Link>
         </Box>
