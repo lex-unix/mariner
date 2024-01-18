@@ -9,7 +9,7 @@ const isActive = href === Astro.url.pathname
 
 <a
   href={href}
-  class={`hidden ${isActive ? 'text-gray-900' : 'text-gray-500'} transition-colors hover:text-gray-900 hover:underline md:inline`}
+  class={`hidden ${isActive ? 'text-gray-900' : 'text-gray-600'} transition-colors hover:text-gray-900 hover:underline md:inline`}
 >
   <slot />
 </a>
