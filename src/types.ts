@@ -15,3 +15,8 @@ export type Marina = Item & {
   price: string | undefined
   capacity: string
 }
+
+export type Apartment = Item & {
+  price: string | undefined
+  capacity: string
+}

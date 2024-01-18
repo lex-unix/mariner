@@ -16,7 +16,9 @@ export default defineConfig({
       components: {
         'page': 'storyblok/Page',
         'marina': 'storyblok/Item',
-        'marinaList': 'storyblok/MarinaList'
+        'marinaList': 'storyblok/MarinaList',
+        'apartment': 'storyblok/Item',
+        'apartmentList': 'storyblok/ApartmentList'
       },
       apiOptions: {
         region: 'eu'
