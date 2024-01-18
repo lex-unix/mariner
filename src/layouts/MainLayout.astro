@@ -1,10 +1,15 @@
 ---
 import Navbar from '@/components/Navbar.astro'
+import Footer from '@/components/Footer.astro'
+import Head from '@/components/Head.astro'
 ---
+
+<Head />
 
 <div>
   <Navbar />
   <main class="mx-auto max-w-3xl pt-32">
     <slot />
   </main>
+  <Footer />
 </div>
