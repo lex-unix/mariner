@@ -1,36 +1,17 @@
 {
-  "name": "Mariner website",
-  "version": "1.0.0",
-  "description": "Mariner - yachting and apartments",
+  "name": "mariner",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
-    "build": "next build",
-    "prettier": "prettier --write .",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": [],
-  "author": "Alexey Miin",
-  "license": "ISC",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.16",
-    "@chakra-ui/react": "^2.4.9",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "axios": "^1.2.3",
-    "embla-carousel-autoplay": "^7.0.6",
-    "embla-carousel-class-names": "^7.0.6",
-    "embla-carousel-react": "^7.0.6",
-    "formik": "^2.2.9",
-    "framer-motion": "^8.5.0",
-    "next": "^13.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
-    "yup": "^0.32.11"
-  },
-  "devDependencies": {
-    "eslint": "^8.32.0",
-    "eslint-config-next": "^13.1.6",
-    "prettier": "^2.8.3"
+    "@astrojs/check": "^0.4.1",
+    "astro": "^4.2.0",
+    "typescript": "^5.3.3"
   }
 }
