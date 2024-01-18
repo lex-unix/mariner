@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState, type ReactNode } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import CarouselSlide from "./CarouselSlide";
 
 type DotButtonProps = {
   selected: boolean
