@@ -39,7 +39,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       className="p-2 bg-[#805AD5] text-white dark:text-black dark:bg-[#FCD38D] rounded-md"
     >
-      {theme === 'light' ? <MoonIcon size={16} className='fill-white' /> : <SunIcon size={16} />}
+      {theme === 'light' ? <MoonIcon size={20} className='fill-white' /> : <SunIcon size={20} />}
     </button>
   ) : (
     <div />
