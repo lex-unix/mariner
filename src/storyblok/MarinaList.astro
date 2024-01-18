@@ -1,0 +1,29 @@
+---
+import { storyblokEditable, useStoryblokApi } from '@storyblok/astro'
+import Card from '@/components/Card.astro'
+import type { Marina } from '@/types'
+
+const storyblok = useStoryblokApi()
+const { data } = await storyblok.get('cdn/stories', {
+  version: import.meta.env.DEV ? 'draft' : 'published',
+  content_type: 'marina'
+})
+
+const marina: Marina[] = data.stories.map((story: any) => ({
+  name: story.content.name,
+  slug: story.full_slug,
+  price: story.content.price || 'Contact for price information',
+  capacity: `${story.content.capacity} people`,
+  type: story.content.type,
+  cover: story.content.cover
+}))
+
+const { blok } = Astro.props
+---
+
+<ul
+  class="mt-10 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6"
+  {...storyblokEditable(blok)}
+>
+  {marina.map(item => <Card {...item} />)}
+</ul>
