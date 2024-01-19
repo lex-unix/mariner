@@ -1,10 +1,28 @@
-<meta property="og:url" content="" />
-<meta property="og:image" content="" />
-<meta property="og:title" content="" />
-<meta property="og:site_name" content="" />
+---
+export interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+
+const canonicalURL = new URL(
+  Astro.url.pathname.replace(/([^/])$/, '$1/'),
+  Astro.site
+)
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="theme-color" content="#ffffff" />
+<meta name="generator" content={Astro.generator} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content="/mariner-og.png" />
+<meta property="og:title" content={title} />
+<meta property="og:site_name" content="marinerworldwide.com" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:image" content="" />
-<link rel="canonical" href="" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content="/mariner-og.png" />
+<link rel="canonical" href={canonicalURL} />

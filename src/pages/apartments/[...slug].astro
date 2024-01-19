@@ -1,6 +1,6 @@
 ---
 import MainLayout from '@/layouts/MainLayout.astro'
-import type { Item } from '@/types'
+import type { Apartment } from '@/types'
 import { useStoryblokApi } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 import type { GetStaticPaths } from 'astro'
@@ -28,9 +28,9 @@ const { data } = await sbApi.get(`cdn/stories/apartments/${slug}`, {
   version: import.meta.env.DEV ? 'draft' : 'published'
 })
 
-const item: Item = data.story.content
+const apartment: Apartment = data.story.content
 ---
 
-<MainLayout>
-  <StoryblokComponent blok={item} />
+<MainLayout title={apartment.name}>
+  <StoryblokComponent blok={apartment} />
 </MainLayout>

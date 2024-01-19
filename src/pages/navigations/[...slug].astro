@@ -1,6 +1,6 @@
 ---
 import MainLayout from '@/layouts/MainLayout.astro'
-import type { Item } from '@/types'
+import type { Navigation } from '@/types'
 import { useStoryblokApi } from '@storyblok/astro'
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 import type { GetStaticPaths } from 'astro'
@@ -28,9 +28,9 @@ const { data } = await sbApi.get(`cdn/stories/navigations/${slug}`, {
   version: import.meta.env.DEV ? 'draft' : 'published'
 })
 
-const item: Item = data.story.content
+const navigation: Navigation = data.story.content
 ---
 
-<MainLayout>
-  <StoryblokComponent blok={item} />
+<MainLayout title={navigation.name}>
+  <StoryblokComponent blok={navigation} />
 </MainLayout>

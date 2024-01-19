@@ -11,7 +11,7 @@ const { data } = await storyblokApi.get('cdn/stories/apartments', {
 const content = data.story.content
 ---
 
-<MainLayout>
+<MainLayout title="Apartments">
   <h1 class="text-center font-cinzel text-3xl">Enjoy Comfort</h1>
   <StoryblokComponent blok={content} />
 </MainLayout>
