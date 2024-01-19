@@ -17,7 +17,9 @@ const { data } = await storyblok.get('cdn/stories', {
 const marina: Marina[] = data.stories.map((story: any) => ({
   name: story.content.name,
   slug: story.full_slug,
-  price: story.content.price || 'Contact for price information',
+  price: story.content.price
+    ? `${story.content.price}€ per night`
+    : 'Contact for price information',
   capacity: `${story.content.capacity} people`,
   type: story.content.type,
   cover: story.content.cover
@@ -44,7 +46,7 @@ const { blok } = Astro.props
           </CardMeta>
           <CardMeta>
             <BanknoteIcon slot="icon" size={16} />
-            {item.price}&euro; per night
+            {item.price}
           </CardMeta>
           <a href={`/${item.slug}`} class="hover:underline">
             <CardMeta>
@@ -57,4 +59,3 @@ const { blok } = Astro.props
     ))
   }
 </ul>
-
