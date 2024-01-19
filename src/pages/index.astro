@@ -1,0 +1,21 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro'
+import HomeCarousel from '@/components/HomeCarousel.tsx'
+---
+
+<MainLayout>
+  <div class="pb-5 text-center">
+    <h1 class="pb-2 font-cinzel text-3xl">Mariner</h1>
+    <p class="font-cinzel">Banjole / Istria / Croatia</p>
+  </div>
+  <HomeCarousel client:load />
+  <div class="pt-8 text-gray-500 dark:text-gray-400">
+    <p class="text-center">
+      Explore, experience and enjoy Croatia with Mariner. We provide exclusive
+      services for everyone.
+    </p>
+    <p class="pt-2 text-center">
+      Discover yachts, catamarans, apartments and more.
+    </p>
+  </div>
+</MainLayout>

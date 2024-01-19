@@ -1,0 +1,21 @@
+---
+import { Toaster } from 'sonner'
+import Head from '@/components/Head.astro'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+  </head>
+  <body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+    <Toaster client:load />
+    <slot />
+  </body>
+</html>

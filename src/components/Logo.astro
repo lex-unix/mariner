@@ -1,0 +1,21 @@
+<a href="/">
+  <div class="inline-flex items-center gap-2 py-2.5">
+    <img
+      alt="Logo"
+      src="/images/logo.png"
+      class="h-5 w-5"
+      style="content: var(--logo-src);"
+    />
+    <span class="font-cinzel font-semibold">Mariner</span>
+  </div>
+</a>
+
+<style is:global>
+  :root {
+    --logo-src: url(/images/logo.png);
+  }
+
+  .dark {
+    --logo-src: url(/images/logo-dark.png);
+  }
+</style>
