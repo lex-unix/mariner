@@ -25,7 +25,7 @@ export default function DropdownMenu() {
             <DropdownMenuItem href="/">Home</DropdownMenuItem>
             <DropdownMenuItem href="/marina">Marina</DropdownMenuItem>
             <DropdownMenuItem href="/apartments">Apartments</DropdownMenuItem>
-            <DropdownMenuItem href="/navigations">Routes</DropdownMenuItem>
+            <DropdownMenuItem href="/navigations">Navigations</DropdownMenuItem>
             <DropdownMenuItem href="/contact-us">Contact Us</DropdownMenuItem>
           </div>
         </Menu.Items>
