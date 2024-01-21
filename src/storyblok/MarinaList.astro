@@ -34,28 +34,28 @@ const { blok } = Astro.props
 >
   {
     marina.map(item => (
-      <Card>
-        <CardImage slot="image" src={item.cover.filename} alt={item.name} />
-        <CardTitle slot="title">
-          {item.name} <Tag slot="tag">{item.type}</Tag>
-        </CardTitle>
-        <Fragment slot="meta">
-          <CardMeta>
-            <UsersIcon slot="icon" size={16} />
-            {item.capacity}
-          </CardMeta>
-          <CardMeta>
-            <BanknoteIcon slot="icon" size={16} />
-            {item.price}
-          </CardMeta>
-          <a href={`/${item.slug}`} class="hover:underline">
+      <a href={`/${item.slug}`}>
+        <Card>
+          <CardImage slot="image" src={item.cover.filename} alt={item.name} />
+          <CardTitle slot="title">
+            {item.name} <Tag slot="tag">{item.type}</Tag>
+          </CardTitle>
+          <Fragment slot="meta">
+            <CardMeta>
+              <UsersIcon slot="icon" size={16} />
+              {item.capacity}
+            </CardMeta>
+            <CardMeta>
+              <BanknoteIcon slot="icon" size={16} />
+              {item.price}
+            </CardMeta>
             <CardMeta>
               <ImageIcon slot="icon" size={16} />
               View gallery
             </CardMeta>
-          </a>
-        </Fragment>
-      </Card>
+          </Fragment>
+        </Card>
+      </a>
     ))
   }
 </ul>

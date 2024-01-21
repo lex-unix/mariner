@@ -31,18 +31,18 @@ const { blok } = Astro.props
 >
   {
     navigations.map(item => (
-      <Card>
-        <CardImage slot="image" src={item.cover.filename} alt={item.name} />
-        <CardTitle slot="title">{item.name}</CardTitle>
-        <Fragment slot="meta">
-          <a href={`/${item.slug}`} class="hover:underline">
+      <a href={`/${item.slug}`}>
+        <Card>
+          <CardImage slot="image" src={item.cover.filename} alt={item.name} />
+          <CardTitle slot="title">{item.name}</CardTitle>
+          <Fragment slot="meta">
             <CardMeta>
               <MapIcon slot="icon" size={16} />
               View navigation
             </CardMeta>
-          </a>
-        </Fragment>
-      </Card>
+          </Fragment>
+        </Card>
+      </a>
     ))
   }
 </ul>

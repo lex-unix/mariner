@@ -33,26 +33,26 @@ const { blok } = Astro.props
 >
   {
     apartments.map(item => (
-      <Card>
-        <CardImage slot="image" src={item.cover.filename} alt={item.name} />
-        <CardTitle slot="title">{item.name}</CardTitle>
-        <Fragment slot="meta">
-          <CardMeta>
-            <UsersIcon slot="icon" size={16} />
-            {item.capacity}
-          </CardMeta>
-          <CardMeta>
-            <BanknoteIcon slot="icon" size={16} />
-            {item.price}
-          </CardMeta>
-          <a href={`/${item.slug}`} class="hover:underline">
+      <a href={`/${item.slug}`} class="block">
+        <Card>
+          <CardImage slot="image" src={item.cover.filename} alt={item.name} />
+          <CardTitle slot="title">{item.name}</CardTitle>
+          <Fragment slot="meta">
+            <CardMeta>
+              <UsersIcon slot="icon" size={16} />
+              {item.capacity}
+            </CardMeta>
+            <CardMeta>
+              <BanknoteIcon slot="icon" size={16} />
+              {item.price}
+            </CardMeta>
             <CardMeta>
               <ImageIcon slot="icon" size={16} />
               View gallery
             </CardMeta>
-          </a>
-        </Fragment>
-      </Card>
+          </Fragment>
+        </Card>
+      </a>
     ))
   }
 </ul>
