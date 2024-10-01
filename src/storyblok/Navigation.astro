@@ -1,18 +1,20 @@
 ---
 import type { Navigation } from '@/types'
-import RichTextRenderer from '@storyblok/astro/RichTextRenderer.astro'
-import { storyblokEditable } from '@storyblok/astro'
+import { storyblokEditable, renderRichText } from '@storyblok/astro'
 
 interface Props {
   blok: Navigation
 }
 
 const { blok } = Astro.props
+const richText = renderRichText(blok.text)
 ---
 
-<article class="navigation-article" {...storyblokEditable(blok)}>
-  <RichTextRenderer richTextData={blok.text} />
-</article>
+<article
+  class="navigation-article"
+  {...storyblokEditable(blok)}
+  set:html={richText}
+/>
 
 <style is:global>
   .navigation-article h1,
