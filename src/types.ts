@@ -1,4 +1,4 @@
-import type { ISbRichtext } from '@storyblok/astro'
+import type { RichTextType } from 'storyblok-rich-text-astro-renderer'
 
 export type Item = {
   slug: string
@@ -24,5 +24,5 @@ export type Apartment = Item & {
 }
 
 export type Navigation = Omit<Item, 'images'> & {
-  text: ISbRichtext
+  text: RichTextType
 }
