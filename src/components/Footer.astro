@@ -1,5 +1,13 @@
 <footer class="mt-10 pb-8 text-center opacity-40 md:pb-12">
   <p>
-    &copy; {new Date().getFullYear()} Mariner Worldwide. All Right Reserved.
+    &copy; <span id="year"></span> Mariner Worldwide. All Right Reserved.
   </p>
 </footer>
+
+<script>
+  const yearElement = document.getElementById('year')
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear().toString()
+  }
+</script>
+
